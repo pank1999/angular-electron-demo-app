@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm test
+
+echo "Verifing the commit..."
+
+# Any steps to be taken
+if npx git-branch-is main; then
+    echo "Warning: Commiting to Main"
+fi
+
+if npx git-branch-is prod-test; then
+    echo "Warning: Commiting to Production"
+else
+    echo "Please ignore the error prompt. You're good to go, the branch is not Protected"
+fi
+
+echo "Veified"
+
+exit 0
