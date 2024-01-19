@@ -1,5 +1,5 @@
 {
-  "name": "angular-electron-demo-app",
+  "name": "angular-electron-timer-app",
   "version": "0.0.0",
   "main": "main.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "test": "ng test",
     "electron": "electron .",
     "electron-build": "ng build && electron .",
-    "prepare": "husky install"
+    "prepare": "chmod +x  husky install"
   },
   "private": true,
   "dependencies": {
